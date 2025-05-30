@@ -43,8 +43,9 @@ def copy_to_clipboard():
 # 创建主窗口
 root = tk.Tk()
 root.title("密码生成器")
-root.geometry("400x300")
+root.geometry("800x600")
 root.resizable(False, False)
+root.configure(bg="#e6f3ff")  # 设置窗口背景色为浅灰色
 
 # 密码长度
 tk.Label(root, text="密码长度：").pack(pady=5)
@@ -63,7 +64,7 @@ tk.Checkbutton(root, text="包含小写字母", variable=var_lower).pack(anchor=
 tk.Checkbutton(root, text="包含特殊符号", variable=var_symbols).pack(anchor='w', padx=80)
 
 # 生成按钮
-tk.Button(root, text="生成密码", command=generate_password, bg="#4CAF50", fg="white").pack(pady=10)
+tk.Button(root, text="生成密码", command=generate_password).pack(pady=5)
 
 # 显示密码
 password_var = tk.StringVar()
